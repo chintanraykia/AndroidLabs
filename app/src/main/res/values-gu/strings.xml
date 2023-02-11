@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">લેબ ૨</string>
-    <string name="hello_message">લેબ સંતાકુકડી</string>
-    <string name="ButtonText">અહીં ક્લિક કરો</string>
-    <string name="CheckboxText">આ તપાસો</string>
-    <string name="SwitchText">ચાલુ/બંધ સ્વિચ કરો</string>
-    <string name="EditTextName">અહીં નામ દાખલ કરો</string>
-    <string name="toast_message">અહીં વધુ માહિતી છે</string>
-    <string name="on">સ્વીચ હવે ચાલુ છે</string>
-    <string name="off">સ્વીચ હવે બંધ છે</string>
-    <string name="undo">પૂર્વવત્ કરો    </string>
+
+    <string name="app_name">એન્ડ્રોઇડ લેબ્સ</string>
+    <string name="hello_message">મેન એક્ટિવિટી</string>
+    <string name="EditTextName">તમારું ઇમેઇલ નાખો</string>
+    <string name="EditTextName2">તમારું પાસવર્ડ નાખો</string>
+    <string name="ButtonText">લૉગિન કરો</string>
+    <string name="profile_activity">પ્રોફાઇલ એક્ટિવિટી</string>
+    <string name="enter_your_name">તમારું નામ લખો</string>
+    <string name="enter_your_email">તમારું ઇમેઇલ લખો</string>
+    <string name="take_picture">ચિત્ર લેવો</string>
 
 </resources>

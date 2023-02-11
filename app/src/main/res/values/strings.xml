@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Labs 02</string>
-    <string name="hello_message">Lab2 GUI</string>
-    <string name="ButtonText">click here</string>
-    <string name="CheckboxText">check this out</string>
-    <string name="SwitchText">Switch on/off</string>
-    <string name="EditTextName"> Enter name here </string>
-    <string name="toast_message">Here is more information</string>
-    <string name="on">The switch in now on</string>
-    <string name="off">The switch in now off</string>
-    <string name="undo">Undo</string>
+
+    <string name="app_name">Android Labs</string>
+    <string name="hello_message">Main Activity</string>
+    <string name="EditTextName">Enter your email</string>
+    <string name="EditTextName2">Enter your password</string>
+    <string name="ButtonText">LOGIN</string>
+    <string name="profile_activity">Profile Activity</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="take_picture">TAKE PICTURE</string>
 
 </resources>
