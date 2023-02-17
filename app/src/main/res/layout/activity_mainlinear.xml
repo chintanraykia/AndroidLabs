@@ -14,8 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="@string/hello_message"
+        android:text="@string/main_activity"
         android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textColorHint="@color/teal_700"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,22 +29,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:hint="@string/EditTextName"
+        android:hint="@string/EditTextMainEmail"
+        android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
-        android:textSize="45sp"
-        android:importantForAutofill="no" />
+        android:textSize="45sp" />
 
     <EditText
         android:id="@+id/textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:hint="@string/EditTextName2"
+        android:hint="@string/EditTextMainPassword"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         android:textAlignment="center"
-        android:textSize="45sp"
-        android:importantForAutofill="no" />
+        android:textSize="45sp" />
 
     <Button
         android:id="@+id/button"
@@ -50,6 +52,6 @@
         android:layout_height="wrap_content"
         android:layout_columnWeight="100"
         android:onClick="clickListener"
-        android:text="@string/ButtonText" />
+        android:text="@string/ButtonTextMain" />
 
 </LinearLayout>

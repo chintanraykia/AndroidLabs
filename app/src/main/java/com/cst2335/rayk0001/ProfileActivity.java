@@ -1,102 +1,95 @@
 package com.cst2335.rayk0001;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
+import android.content.SharedPreferences;
+import android.widget.TextView;
+
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private static final String TAG = "PROFILE_ACTIVITY";
-    private ActivityResultLauncher<Intent> myPictureTakerLauncher;
+    private static final String androidLab4 = "userData";
+    private static final String userName = "userName";
+    private static final String userAddress = "userAddress";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        Log.e(TAG, "In function: onCreate");
 
-        Button takePictureButton = findViewById(R.id.pictureButton);
-        EditText name_edit = findViewById(R.id.editTextTextPersonName2);
-        String name = "Chintan";
+        SharedPreferences sharedPreferences = getSharedPreferences(androidLab4, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        takePictureButton.setOnClickListener(v -> dispatchTakePictureIntent());
+        Button saveData = findViewById(R.id.saveData);
+        Button clearData = findViewById(R.id.clearData);
+        EditText name_edit = findViewById(R.id.name);
+        EditText address_edit = findViewById(R.id.editTextProfileAddress);
 
-        myPictureTakerLauncher = registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(),
-                new ActivityResultCallback<ActivityResult>() {
-                    @Override
-                    public void onActivityResult(ActivityResult result) {
-                        ImageView imgView = findViewById(R.id.imageView);
-                        if (result.getResultCode() == Activity.RESULT_OK) {
-                            Intent data = result.getData();
-                            assert data != null;
-                            Bitmap imgBitmap = (Bitmap) data.getExtras().get("data");
-                            imgView.setImageBitmap(imgBitmap);
-                        } else if (result.getResultCode() == Activity.RESULT_CANCELED) {
-                            Log.i(TAG, "User refused to capture a picture.");
-                        }
-                    }
-                }
-        );
+        saveData.setOnClickListener(view -> {
+            String name = name_edit.getText().toString();
+            String address = address_edit.getText().toString();
+
+            editor.putString(userName, name);
+            editor.putString(userAddress, address);
+            editor.apply();
+        });
+
+        String name = sharedPreferences.getString("userName", "");
+        String address = sharedPreferences.getString("userAddress", "");
+
+        name_edit.setText(name);
+        address_edit.setText(address);
 
         Intent fromMain = getIntent();
         String email = fromMain.getStringExtra("EMAIL");
-        EditText emailText = findViewById(R.id.editTextTextEmailName);
+        TextView emailText = findViewById(R.id.EditTextMainEmail);
         emailText.setText(email);
 
-        name_edit.setText(name);
+        clearData.setOnClickListener(v -> {
+            name_edit.getText().toString();
+            address_edit.getText().toString();
+
+            editor.remove(userName);
+            editor.remove(userAddress);
+            editor.apply();
+
+            name_edit.setText("");
+            address_edit.setText("");
+        });
 
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.e(TAG, "In function: onStarts");
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.e(TAG, "In function: onResume");
+
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.e(TAG, "In function: onPause");
+
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.e(TAG, "In function: onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.e(TAG, "In function: onDestroy");
-    }
-
-    @SuppressLint("QueryPermissionsNeeded")
-    private void dispatchTakePictureIntent() {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            myPictureTakerLauncher.launch(takePictureIntent);
-        }
 
     }
 

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Android Labs</string>
-    <string name="hello_message">Main Activity</string>
-    <string name="EditTextName">Enter your email</string>
-    <string name="EditTextName2">Enter your password</string>
-    <string name="ButtonText">LOGIN</string>
-    <string name="profile_activity">Profile Activity</string>
-    <string name="enter_your_name">Enter your name</string>
-    <string name="enter_your_email">Enter your email</string>
-    <string name="take_picture">TAKE PICTURE</string>
-
+    <string name="app_name">Android Labs Lab 4</string>
+    <string name="main_activity">Main Activity</string>
+    <string name="EditTextMainEmail">Enter your email</string>
+    <string name="EditTextMainPassword">Enter your password</string>
+    <string name="ButtonTextMain">LOGIN</string>
+    <string name="profile_activity">Your profile</string>
+    <string name="editTextProfileName">Enter your name</string>
+    <string name="editTextProfileAddress">Address</string>
+    <string name="saveData">SAVE DATA</string>
+    <string name="clearData">CLEAR DATA</string>
+    <string name="desc">User icon</string>chi
 </resources>
