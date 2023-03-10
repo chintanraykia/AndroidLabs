@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">એન્ડ્રોઇડ લેબ્સ લેબ ૪</string>
+    <string name="app_name">એન્ડ્રોઇડ લેબ્સ લેબ ૬</string>
     <string name="main_activity">મેન એક્ટિવિટી</string>
     <string name="EditTextMainEmail">તમારું ઇમેઇલ નાખો</string>
     <string name="EditTextMainPassword">તમારું પાસવર્ડ નાખો</string>
@@ -12,4 +12,9 @@
     <string name="saveData">માહિતી સાચવો</string>
     <string name="clearData">માહિતી રદ્દ કરો</string>
     <string name="desc">વપરાશકર્તા ચિહ્ન</string>
+    <string name="message_text">સંદેશ અહીં જાય છે</string>
+    <string name="sendButton">મોકલો</string>
+    <string name="receiveButton">પ્રાપ્ત કરો</string>
+    <string name="time_text">સમય અહીં જાય છે</string>
+
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Android Labs Lab 4</string>
+    <string name="app_name">Android Labs Lab 6</string>
     <string name="main_activity">Main Activity</string>
     <string name="EditTextMainEmail">Enter your email</string>
     <string name="EditTextMainPassword">Enter your password</string>
@@ -11,5 +11,11 @@
     <string name="editTextProfileAddress">Address</string>
     <string name="saveData">SAVE DATA</string>
     <string name="clearData">CLEAR DATA</string>
-    <string name="desc">User icon</string>chi
+    <string name="desc">User icon</string>
+    <string name="message_text">Message goes here</string>
+    <string name="sendButton">SEND</string>
+    <string name="receiveButton">RECEIVE</string>
+    <string name="time_text">Time goes here</string>
+
+
 </resources>
