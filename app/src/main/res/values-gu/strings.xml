@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">એન્ડ્રોઇડ લેબ્સ લેબ ૬</string>
+    <string name="app_name">એન્ડ્રોઇડ લેબ્સ લેબ 7</string>
     <string name="main_activity">મેન એક્ટિવિટી</string>
     <string name="EditTextMainEmail">તમારું ઇમેઇલ નાખો</string>
     <string name="EditTextMainPassword">તમારું પાસવર્ડ નાખો</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Android Labs Lab 6</string>
+    <string name="app_name">Android Labs Lab 7</string>
     <string name="main_activity">Main Activity</string>
     <string name="EditTextMainEmail">Enter your email</string>
     <string name="EditTextMainPassword">Enter your password</string>
