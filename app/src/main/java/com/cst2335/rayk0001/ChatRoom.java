@@ -30,8 +30,6 @@ public class ChatRoom extends AppCompatActivity {
     ChatRoomViewModel chatModel;
 
     ChatMessage chat = new ChatMessage("", "", false);
-    SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd-MMM-yyyy hh-mm-ss a");
-    String currentDateandTime = sdf.format(new Date());
 
     /**
      * Load all messages from the database into the messages ArrayList in a separate thread.
@@ -60,13 +58,15 @@ public class ChatRoom extends AppCompatActivity {
         mDAO = db.chatMessageDAO();
 
         if (messages == null) {
-          chatModel.messages.postValue(messages = new ArrayList<ChatMessage>());
+            chatModel.messages.postValue(messages = new ArrayList<ChatMessage>());
         }
 
         // Load all messages from the database into the messages ArrayList
         loadMessages();
 
         binding.sendButton.setOnClickListener(click -> {
+            SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd-MMM-yyyy hh-mm-ss a");
+            String currentDateandTime = sdf.format(new Date());
             String message = binding.textInput.getText().toString();
             boolean sentButton = true;
             chat = new ChatMessage(message, currentDateandTime, sentButton);
@@ -77,9 +77,12 @@ public class ChatRoom extends AppCompatActivity {
         });
 
         binding.receiveButton.setOnClickListener(click -> {
+            SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd-MMM-yyyy hh-mm-ss a");
+            String currentDateandTime = sdf.format(new Date());
             String message = binding.textInput.getText().toString();
             boolean receiveButton = false;
             chat = new ChatMessage(message, currentDateandTime, receiveButton);
+
             messages.add(chat);
             myAdapter.notifyItemInserted(messages.size() - 1);
 
@@ -134,7 +137,6 @@ public class ChatRoom extends AppCompatActivity {
         TextView time;
 
         /**
-         *
          * @param itemView Row view in RecycleView
          */
         public MyRowHolder(@NonNull View itemView) {
